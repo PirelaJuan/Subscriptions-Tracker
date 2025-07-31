@@ -28,8 +28,9 @@ const subscriptionSchema = new mongoose.Schema({
     enum: ["sports", 'news', 'entertainment', 'lifestyle', 'technology', 'finance', 'politics', 'other'],
     required: true
   },
-  payment: {
+  paymentMethod: {
     type: String,
+    enum: ["Credit Card", "Paypal", "Bank Transfer"],
     required: true,
     trim: true
   },
